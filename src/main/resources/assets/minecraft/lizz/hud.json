@@ -1,0 +1,1812 @@
+[
+  {
+    "Type": "Text",
+    "X": -127.42403221130371,
+    "Y": -6.736885070800781,
+    "Scale": 0.95,
+    "HorizontalFacing": "Middle",
+    "VerticalFacing": "Down",
+    "ScaffoldOnly": false,
+    "ShowBlock": false,
+    "DisplayText": "BPS %bps%",
+    "Text-ColorMode": "Custom",
+    "TextColor": {
+      "ColorPicker": [
+        0.0,
+        0.0
+      ],
+      "HueSliderY": 0.0,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Text-Gradient-Speed": 2.9530516,
+    "Max-Text-Gradient-Colors": 2,
+    "Text-Gradient1": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.5601308,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Text-Gradient2": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.4202614,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Text-Gradient3": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.6666667,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Text-Gradient4": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.0,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Text-Gradient5": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.33333334,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Text-Gradient6": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.6666667,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Text-Gradient7": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.0,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Text-Gradient8": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.33333334,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Text-Gradient9": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.6666667,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "RoundedBackGround-Radius": 3.450704,
+    "Background-Scale": 1.0,
+    "Background-ColorMode": "Custom",
+    "BackgroundColor": {
+      "ColorPicker": [
+        0.0,
+        1.0
+      ],
+      "HueSliderY": 0.0,
+      "OpacitySliderY": 0.5411765,
+      "Rainbow": false
+    },
+    "GlowShadow": true,
+    "Shadow-Strength": 0.5586854,
+    "Shadow-Color": {
+      "ColorPicker": [
+        0.0,
+        1.0
+      ],
+      "HueSliderY": 0.0,
+      "OpacitySliderY": 0.47058824,
+      "Rainbow": false
+    },
+    "Background-Gradient-Speed": 1.0,
+    "Max-Background-Gradient-Colors": 4,
+    "Background-Gradient1": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.0,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Background-Gradient2": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.33333334,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Background-Gradient3": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.6666667,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Background-Gradient4": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.0,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Background-Gradient5": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.33333334,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Background-Gradient6": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.6666667,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Background-Gradient7": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.0,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Background-Gradient8": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.33333334,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Background-Gradient9": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.6666667,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "BackgroundBorder-Width": 0.5,
+    "BackgroundBorderColor": {
+      "ColorPicker": [
+        0.0,
+        1.0
+      ],
+      "HueSliderY": 0.0,
+      "OpacitySliderY": 0.0,
+      "Rainbow": false
+    },
+    "Rainbow-X": -1000.0,
+    "Rainbow-Y": -1000.0,
+    "Gradient-X": 2000.0,
+    "Gradient-Y": 2000.0,
+    "Shadow": false,
+    "Font": {
+      "fontName": "Outfit Regular",
+      "fontSize": 40
+    }
+  },
+  {
+    "Type": "Arraylist",
+    "X": 45.22073745727539,
+    "Y": 6.7662353515625,
+    "Scale": 1.05,
+    "HorizontalFacing": "Right",
+    "VerticalFacing": "Up",
+    "Text-Mode": "Gradient",
+    "TextColor": {
+      "ColorPicker": [
+        0.8392157,
+        0.0
+      ],
+      "HueSliderY": 0.64018697,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Text-Fade": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.59411764,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Text-Fade-Distance": 50,
+    "Text-Gradient-Speed": 1.0029411,
+    "Max-Text-Gradient-Colors": 2,
+    "Text-Gradient1": {
+      "ColorPicker": [
+        0.627451,
+        0.0
+      ],
+      "HueSliderY": 0.5604167,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Text-Gradient2": {
+      "ColorPicker": [
+        0.42745098,
+        0.0
+      ],
+      "HueSliderY": 0.53975534,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Text-Gradient3": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.07973856,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Text-Gradient4": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.16013072,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Text-Gradient5": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.43986928,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Text-Gradient6": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.3601307,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Text-Gradient7": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.5,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Text-Gradient8": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.57973856,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Text-Gradient9": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.7398693,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Rect-Mode": "Right",
+    "RoundedRect-Radius": 0.0,
+    "Rect-ColorMode": "Gradient",
+    "RectColor": {
+      "ColorPicker": [
+        0.8392157,
+        0.0
+      ],
+      "HueSliderY": 0.64018697,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Rect-Fade": {
+      "ColorPicker": [
+        0.0,
+        0.0
+      ],
+      "HueSliderY": 0.0,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Rect-Fade-Distance": 50,
+    "Rect-Gradient-Speed": 1.0,
+    "Max-Rect-Gradient-Colors": 2,
+    "Rect-Gradient1": {
+      "ColorPicker": [
+        0.6666667,
+        0.0
+      ],
+      "HueSliderY": 0.55980396,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Rect-Gradient2": {
+      "ColorPicker": [
+        0.36078432,
+        0.0
+      ],
+      "HueSliderY": 0.5199275,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Rect-Gradient3": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.6666667,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Rect-Gradient4": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.0,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Rect-Gradient5": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.33333334,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Rect-Gradient6": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.6666667,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Rect-Gradient7": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.0,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Rect-Gradient8": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.33333334,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Rect-Gradient9": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.6666667,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "RoundedBackGround-Radius": 0.0,
+    "Background-Mode": "Custom",
+    "Shadowcheck": true,
+    "ShadowStrength": 1.0,
+    "BackgroundColor": {
+      "ColorPicker": [
+        0.0,
+        1.0
+      ],
+      "HueSliderY": 0.0,
+      "OpacitySliderY": 0.41960785,
+      "Rainbow": false
+    },
+    "Background-Fade": {
+      "ColorPicker": [
+        0.0,
+        1.0
+      ],
+      "HueSliderY": 0.0,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Background-Fade-Distance": 50,
+    "Background-Gradient-Speed": 1.0,
+    "Max-Background-Gradient-Colors": 4,
+    "Background-Gradient1": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.0,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Background-Gradient2": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.33333334,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Background-Gradient3": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.6666667,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Background-Gradient4": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.0,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Background-Gradient5": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.33333334,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Background-Gradient6": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.6666667,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Background-Gradient7": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.0,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Background-Gradient8": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.33333334,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Background-Gradient9": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.6666667,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "DisplayIcons": false,
+    "IconShadows": true,
+    "ShadowXDistance": 0.0,
+    "ShadowYDistance": 0.0,
+    "ShadowColor": {
+      "ColorPicker": [
+        0.0,
+        1.0
+      ],
+      "HueSliderY": 0.0,
+      "OpacitySliderY": 0.5019608,
+      "Rainbow": true
+    },
+    "IconColorMode": "Custom",
+    "IconColor": {
+      "ColorPicker": [
+        0.0,
+        0.0
+      ],
+      "HueSliderY": 0.0,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "IconFadeColor": {
+      "ColorPicker": [
+        0.0,
+        0.0
+      ],
+      "HueSliderY": 0.0,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "IconFadeDistance": 50,
+    "Random-Saturation": 0.9,
+    "Random-Brightness": 1.0,
+    "Rainbow-X": -1000.0,
+    "Rainbow-Y": -1000.0,
+    "Gradient-X": 2000.0,
+    "Gradient-Y": 2000.0,
+    "Tags": true,
+    "TagsStyle": "Space",
+    "TagsCase": "Normal",
+    "TagsArrayColor": false,
+    "Font": {
+      "fontName": "Outfit Regular",
+      "fontSize": 35
+    },
+    "ShadowText": false,
+    "ModuleCase": "Normal",
+    "Space": 1.0,
+    "TextHeight": 11.0,
+    "TextY": 3.25,
+    "Animation": "Slide",
+    "AnimationSpeed": 1.0,
+    "SpacedModules": true,
+    "InactiveModulesStyle": "Color"
+  },
+  {
+    "Type": "Text",
+    "X": -59.51501274108887,
+    "Y": -192.6689453125,
+    "Scale": 0.8499999,
+    "HorizontalFacing": "Middle",
+    "VerticalFacing": "Middle",
+    "ScaffoldOnly": true,
+    "ShowBlock": true,
+    "DisplayText": "Ammount: %blockcount%",
+    "Text-ColorMode": "Custom",
+    "TextColor": {
+      "ColorPicker": [
+        0.0,
+        0.0
+      ],
+      "HueSliderY": 0.0,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Text-Gradient-Speed": 0.5,
+    "Max-Text-Gradient-Colors": 2,
+    "Text-Gradient1": {
+      "ColorPicker": [
+        0.7882353,
+        0.0
+      ],
+      "HueSliderY": 0.5199005,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Text-Gradient2": {
+      "ColorPicker": [
+        0.37254903,
+        0.0
+      ],
+      "HueSliderY": 0.5,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Text-Gradient3": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.6666667,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Text-Gradient4": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.0,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Text-Gradient5": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.33333334,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Text-Gradient6": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.6666667,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Text-Gradient7": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.0,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Text-Gradient8": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.33333334,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Text-Gradient9": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.6666667,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "RoundedBackGround-Radius": 3.7558687,
+    "Background-Scale": 1.0469483,
+    "Background-ColorMode": "Custom",
+    "BackgroundColor": {
+      "ColorPicker": [
+        0.0,
+        1.0
+      ],
+      "HueSliderY": 0.0,
+      "OpacitySliderY": 0.5803922,
+      "Rainbow": false
+    },
+    "GlowShadow": true,
+    "Shadow-Strength": 0.5117371,
+    "Shadow-Color": {
+      "ColorPicker": [
+        0.0,
+        1.0
+      ],
+      "HueSliderY": 0.0,
+      "OpacitySliderY": 0.47058824,
+      "Rainbow": false
+    },
+    "Background-Gradient-Speed": 1.0,
+    "Max-Background-Gradient-Colors": 4,
+    "Background-Gradient1": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.0,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Background-Gradient2": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.33333334,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Background-Gradient3": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.6666667,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Background-Gradient4": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.0,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Background-Gradient5": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.33333334,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Background-Gradient6": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.6666667,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Background-Gradient7": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.0,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Background-Gradient8": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.33333334,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Background-Gradient9": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.6666667,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "BackgroundBorder-Width": 1.2394366,
+    "BackgroundBorderColor": {
+      "ColorPicker": [
+        0.0,
+        1.0
+      ],
+      "HueSliderY": 0.0,
+      "OpacitySliderY": 0.0,
+      "Rainbow": false
+    },
+    "Rainbow-X": -1000.0,
+    "Rainbow-Y": -1000.0,
+    "Gradient-X": 2000.0,
+    "Gradient-Y": 2000.0,
+    "Shadow": false,
+    "Font": {
+      "fontName": "Outfit Regular",
+      "fontSize": 40
+    }
+  },
+  {
+    "Type": "Text",
+    "X": 11.0,
+    "Y": 5.0,
+    "Scale": 1.0,
+    "HorizontalFacing": "Middle",
+    "VerticalFacing": "Up",
+    "ScaffoldOnly": false,
+    "ShowBlock": false,
+    "DisplayText": "FPS %FPS%",
+    "Text-ColorMode": "Custom",
+    "TextColor": {
+      "ColorPicker": [
+        0.0,
+        0.0
+      ],
+      "HueSliderY": 0.0,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Text-Gradient-Speed": 1.0,
+    "Max-Text-Gradient-Colors": 2,
+    "Text-Gradient1": {
+      "ColorPicker": [
+        0.4392157,
+        0.0
+      ],
+      "HueSliderY": 0.54017854,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Text-Gradient2": {
+      "ColorPicker": [
+        0.73333335,
+        0.0
+      ],
+      "HueSliderY": 0.54010695,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Text-Gradient3": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.6666667,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Text-Gradient4": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.0,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Text-Gradient5": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.33333334,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Text-Gradient6": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.6666667,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Text-Gradient7": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.0,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Text-Gradient8": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.33333334,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Text-Gradient9": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.6666667,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "RoundedBackGround-Radius": 3.4272301,
+    "Background-Scale": 1.0,
+    "Background-ColorMode": "Custom",
+    "BackgroundColor": {
+      "ColorPicker": [
+        0.0,
+        1.0
+      ],
+      "HueSliderY": 0.0,
+      "OpacitySliderY": 0.6,
+      "Rainbow": false
+    },
+    "GlowShadow": true,
+    "Shadow-Strength": 0.5,
+    "Shadow-Color": {
+      "ColorPicker": [
+        0.0,
+        1.0
+      ],
+      "HueSliderY": 0.0,
+      "OpacitySliderY": 0.47058824,
+      "Rainbow": false
+    },
+    "Background-Gradient-Speed": 1.0,
+    "Max-Background-Gradient-Colors": 4,
+    "Background-Gradient1": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.0,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Background-Gradient2": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.33333334,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Background-Gradient3": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.6666667,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Background-Gradient4": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.0,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Background-Gradient5": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.33333334,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Background-Gradient6": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.6666667,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Background-Gradient7": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.0,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Background-Gradient8": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.33333334,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Background-Gradient9": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.6666667,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "BackgroundBorder-Width": 0.5,
+    "BackgroundBorderColor": {
+      "ColorPicker": [
+        0.0,
+        1.0
+      ],
+      "HueSliderY": 0.0,
+      "OpacitySliderY": 0.0,
+      "Rainbow": false
+    },
+    "Rainbow-X": -1000.0,
+    "Rainbow-Y": -1000.0,
+    "Gradient-X": 2000.0,
+    "Gradient-Y": 2000.0,
+    "Shadow": false,
+    "Font": {
+      "fontName": "Outfit Regular",
+      "fontSize": 40
+    }
+  },
+  {
+    "Type": "Text",
+    "X": 2.4999732971191406,
+    "Y": 1.2499656677246094,
+    "Scale": 1.6999993,
+    "HorizontalFacing": "Left",
+    "VerticalFacing": "Up",
+    "ScaffoldOnly": false,
+    "ShowBlock": false,
+    "DisplayText": "Lizz",
+    "Text-ColorMode": "Gradient",
+    "TextColor": {
+      "ColorPicker": [
+        0.0,
+        0.0
+      ],
+      "HueSliderY": 0.0,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Text-Gradient-Speed": 1.0,
+    "Max-Text-Gradient-Colors": 2,
+    "Text-Gradient1": {
+      "ColorPicker": [
+        0.42745098,
+        0.0
+      ],
+      "HueSliderY": 0.53975534,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Text-Gradient2": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.5398693,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Text-Gradient3": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.6666667,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Text-Gradient4": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.0,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Text-Gradient5": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.33333334,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Text-Gradient6": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.6666667,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Text-Gradient7": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.0,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Text-Gradient8": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.33333334,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Text-Gradient9": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.6666667,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "RoundedBackGround-Radius": 3.0,
+    "Background-Scale": 1.0,
+    "Background-ColorMode": "Custom",
+    "BackgroundColor": {
+      "ColorPicker": [
+        0.0,
+        1.0
+      ],
+      "HueSliderY": 0.0,
+      "OpacitySliderY": 0.0,
+      "Rainbow": false
+    },
+    "GlowShadow": false,
+    "Shadow-Strength": 2.5187793,
+    "Shadow-Color": {
+      "ColorPicker": [
+        0.0,
+        1.0
+      ],
+      "HueSliderY": 0.0,
+      "OpacitySliderY": 0.47058824,
+      "Rainbow": false
+    },
+    "Background-Gradient-Speed": 1.0,
+    "Max-Background-Gradient-Colors": 4,
+    "Background-Gradient1": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.0,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Background-Gradient2": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.33333334,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Background-Gradient3": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.6666667,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Background-Gradient4": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.0,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Background-Gradient5": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.33333334,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Background-Gradient6": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.6666667,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Background-Gradient7": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.0,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Background-Gradient8": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.33333334,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Background-Gradient9": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.6666667,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "BackgroundBorder-Width": 0.5,
+    "BackgroundBorderColor": {
+      "ColorPicker": [
+        0.0,
+        1.0
+      ],
+      "HueSliderY": 0.0,
+      "OpacitySliderY": 0.0,
+      "Rainbow": false
+    },
+    "Rainbow-X": -1000.0,
+    "Rainbow-Y": -1000.0,
+    "Gradient-X": 2000.0,
+    "Gradient-Y": 2000.0,
+    "Shadow": false,
+    "Font": {
+      "fontName": "Outfit Semibold",
+      "fontSize": 40
+    }
+  },
+  {
+    "Type": "Text",
+    "X": 58.0,
+    "Y": 12.0,
+    "Scale": 1.0,
+    "HorizontalFacing": "Right",
+    "VerticalFacing": "Down",
+    "ScaffoldOnly": false,
+    "ShowBlock": false,
+    "DisplayText": "User: RainRuin",
+    "Text-ColorMode": "Custom",
+    "TextColor": {
+      "ColorPicker": [
+        0.0,
+        0.0
+      ],
+      "HueSliderY": 0.0,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Text-Gradient-Speed": 1.0,
+    "Max-Text-Gradient-Colors": 4,
+    "Text-Gradient1": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.0,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Text-Gradient2": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.33333334,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Text-Gradient3": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.6666667,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Text-Gradient4": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.0,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Text-Gradient5": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.33333334,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Text-Gradient6": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.6666667,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Text-Gradient7": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.0,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Text-Gradient8": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.33333334,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Text-Gradient9": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.6666667,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "RoundedBackGround-Radius": 3.0,
+    "Background-Scale": 1.0,
+    "Background-ColorMode": "Custom",
+    "BackgroundColor": {
+      "ColorPicker": [
+        0.0,
+        1.0
+      ],
+      "HueSliderY": 0.0,
+      "OpacitySliderY": 0.0,
+      "Rainbow": false
+    },
+    "GlowShadow": false,
+    "Shadow-Strength": 1.0,
+    "Shadow-Color": {
+      "ColorPicker": [
+        0.0,
+        1.0
+      ],
+      "HueSliderY": 0.0,
+      "OpacitySliderY": 0.47058824,
+      "Rainbow": false
+    },
+    "Background-Gradient-Speed": 1.0,
+    "Max-Background-Gradient-Colors": 4,
+    "Background-Gradient1": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.0,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Background-Gradient2": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.33333334,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Background-Gradient3": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.6666667,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Background-Gradient4": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.0,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Background-Gradient5": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.33333334,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Background-Gradient6": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.6666667,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Background-Gradient7": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.0,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Background-Gradient8": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.33333334,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Background-Gradient9": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.6666667,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "BackgroundBorder-Width": 0.92253524,
+    "BackgroundBorderColor": {
+      "ColorPicker": [
+        0.0,
+        1.0
+      ],
+      "HueSliderY": 0.0,
+      "OpacitySliderY": 0.0,
+      "Rainbow": false
+    },
+    "Rainbow-X": -1000.0,
+    "Rainbow-Y": -1000.0,
+    "Gradient-X": -500.0,
+    "Gradient-Y": -1500.0,
+    "Shadow": false,
+    "Font": {
+      "fontName": "Outfit Regular",
+      "fontSize": 35
+    }
+  },
+  {
+    "Type": "Text",
+    "X": 751.0,
+    "Y": 433.0,
+    "Scale": 1.0,
+    "HorizontalFacing": "Left",
+    "VerticalFacing": "Up",
+    "ScaffoldOnly": false,
+    "ShowBlock": false,
+    "DisplayText": "Version:1.1",
+    "Text-ColorMode": "Custom",
+    "TextColor": {
+      "ColorPicker": [
+        0.0,
+        0.0
+      ],
+      "HueSliderY": 0.0,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Text-Gradient-Speed": 1.0,
+    "Max-Text-Gradient-Colors": 4,
+    "Text-Gradient1": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.0,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Text-Gradient2": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.33333334,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Text-Gradient3": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.6666667,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Text-Gradient4": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.0,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Text-Gradient5": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.33333334,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Text-Gradient6": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.6666667,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Text-Gradient7": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.0,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Text-Gradient8": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.33333334,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Text-Gradient9": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.6666667,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "RoundedBackGround-Radius": 3.0,
+    "Background-Scale": 1.0,
+    "Background-ColorMode": "Custom",
+    "BackgroundColor": {
+      "ColorPicker": [
+        0.0,
+        1.0
+      ],
+      "HueSliderY": 0.0,
+      "OpacitySliderY": 0.0,
+      "Rainbow": false
+    },
+    "GlowShadow": false,
+    "Shadow-Strength": 1.0,
+    "Shadow-Color": {
+      "ColorPicker": [
+        0.0,
+        1.0
+      ],
+      "HueSliderY": 0.0,
+      "OpacitySliderY": 0.47058824,
+      "Rainbow": false
+    },
+    "Background-Gradient-Speed": 1.0,
+    "Max-Background-Gradient-Colors": 4,
+    "Background-Gradient1": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.0,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Background-Gradient2": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.33333334,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Background-Gradient3": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.6666667,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Background-Gradient4": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.0,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Background-Gradient5": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.33333334,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Background-Gradient6": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.6666667,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Background-Gradient7": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.0,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Background-Gradient8": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.33333334,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "Background-Gradient9": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.6666667,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "BackgroundBorder-Width": 2.2112675,
+    "BackgroundBorderColor": {
+      "ColorPicker": [
+        0.0,
+        1.0
+      ],
+      "HueSliderY": 0.0,
+      "OpacitySliderY": 0.0,
+      "Rainbow": false
+    },
+    "Rainbow-X": -1000.0,
+    "Rainbow-Y": -1000.0,
+    "Gradient-X": -500.0,
+    "Gradient-Y": -1500.0,
+    "Shadow": false,
+    "Font": {
+      "fontName": "Outfit Regular",
+      "fontSize": 35
+    }
+  },
+  {
+    "Type": "Scoreboard",
+    "X": 13.0,
+    "Y": -28.0,
+    "Scale": 0.99999994,
+    "HorizontalFacing": "Right",
+    "VerticalFacing": "Middle",
+    "TextColor": {
+      "ColorPicker": [
+        0.0,
+        0.0
+      ],
+      "HueSliderY": 0.0,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "BackgroundColor": {
+      "ColorPicker": [
+        0.0,
+        1.0
+      ],
+      "HueSliderY": 0.0,
+      "OpacitySliderY": 0.4392157,
+      "Rainbow": false
+    },
+    "Rounded-Radius": 5.0,
+    "Rect": false,
+    "RectangleColor": {
+      "ColorPicker": [
+        1.0,
+        0.0
+      ],
+      "HueSliderY": 0.59411764,
+      "OpacitySliderY": 1.0,
+      "Rainbow": false
+    },
+    "DrawRectOnTitle": false,
+    "TitleRectColor": {
+      "ColorPicker": [
+        0.0,
+        1.0
+      ],
+      "HueSliderY": 0.0,
+      "OpacitySliderY": 0.5019608,
+      "Rainbow": false
+    },
+    "TitleRectExtraHeight": 5,
+    "TitleRectHeightPadding": 0,
+    "ServerIP": "Client",
+    "Number": false,
+    "Shadow": false,
+    "Font": {
+      "fontName": "Minecraft Font",
+      "fontSize": -1
+    },
+    "ShadowCheck": true,
+    "ShadowStrength": 0.90000004
+  }
+]

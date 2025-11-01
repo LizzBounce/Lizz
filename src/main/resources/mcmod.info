@@ -1,0 +1,16 @@
+[
+  {
+    "modid": "lizz",
+    "name": "Lizz",
+    "description": "Minecraft1.8.9伪造基于LiquidBounce的被黑客入侵的客户端。",
+    "version": "${version}",
+    "mcversion": "1.8.9",
+    "url": "https://liquidbounce.net",
+    "updateUrl": "",
+    "authorList": ["CCBlueX","PickBowen","bzym2"],
+    "credits": "",
+    "logoFile": "",
+    "screenshots": [],
+    "dependencies": []
+  }
+]

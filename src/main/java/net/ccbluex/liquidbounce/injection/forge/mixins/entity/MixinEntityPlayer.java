@@ -1,0 +1,158 @@
+/*
+ * Lizz Hacked Client
+ * A free open source mixin-based injection hacked client for Minecraft using Minecraft Forge.
+ * https://github.com/LizzBounce/Lizz/
+ */
+package net.ccbluex.liquidbounce.injection.forge.mixins.entity;
+
+import com.mojang.authlib.GameProfile;
+import net.ccbluex.liquidbounce.features.module.modules.combat.KeepSprint;
+import net.ccbluex.liquidbounce.features.module.modules.combat.KillAura;
+import net.ccbluex.liquidbounce.features.module.modules.movement.NoSlow;
+import net.ccbluex.liquidbounce.utils.attack.CooldownHelper;
+import net.ccbluex.liquidbounce.utils.client.ClassUtils;
+import net.ccbluex.liquidbounce.utils.client.ClientUtils;
+import net.ccbluex.liquidbounce.utils.movement.MovementUtils;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.item.EntityItem;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.player.InventoryPlayer;
+import net.minecraft.entity.player.PlayerCapabilities;
+import net.minecraft.init.Items;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.ItemSword;
+import net.minecraft.util.DamageSource;
+import net.minecraft.util.FoodStats;
+import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Shadow;
+import org.spongepowered.asm.mixin.injection.*;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
+import org.spongepowered.asm.mixin.injection.callback.LocalCapture;
+
+import static net.ccbluex.liquidbounce.utils.client.MinecraftInstance.mc;
+
+@Mixin(EntityPlayer.class)
+public abstract class MixinEntityPlayer extends MixinEntityLivingBase {
+
+    @Shadow
+    public abstract ItemStack getHeldItem();
+
+    @Shadow
+    public abstract GameProfile getGameProfile();
+
+    @Shadow
+    protected abstract boolean canTriggerWalking();
+
+    @Shadow
+    protected abstract String getSwimSound();
+
+    @Shadow
+    public abstract FoodStats getFoodStats();
+
+    @Shadow
+    protected int flyToggleTimer;
+
+    @Shadow
+    public PlayerCapabilities capabilities;
+
+    @Shadow
+    public abstract int getItemInUseDuration();
+
+    @Shadow
+    public abstract ItemStack getItemInUse();
+
+    @Shadow
+    public abstract boolean isUsingItem();
+
+    @Shadow
+    public InventoryPlayer inventory;
+    @Shadow public ItemStack itemInUse;
+    @Shadow public int itemInUseCount;
+
+    @Shadow
+    public abstract String getName();
+
+    @Shadow
+    public abstract EntityItem dropItem(ItemStack p_dropItem_1_, boolean p_dropItem_2_, boolean p_dropItem_3_);
+
+    private ItemStack cooldownStack;
+    private int cooldownStackSlot;
+
+    @Inject(method = "onUpdate", at = @At("RETURN"))
+    private void injectCooldown(final CallbackInfo callbackInfo) {
+        if (getGameProfile() == mc.thePlayer.getGameProfile()) {
+            CooldownHelper.INSTANCE.incrementLastAttackedTicks();
+            CooldownHelper.INSTANCE.updateGenericAttackSpeed(getHeldItem());
+
+            if (cooldownStackSlot != inventory.currentItem || !ItemStack.areItemStacksEqual(cooldownStack, getHeldItem())) {
+                CooldownHelper.INSTANCE.resetLastAttackedTicks();
+            }
+
+            cooldownStack = getHeldItem();
+            cooldownStackSlot = inventory.currentItem;
+        }
+    }
+
+    @ModifyConstant(method = "attackTargetEntityWithCurrentItem", constant = @Constant(doubleValue = 0.6))
+    private double injectKeepSprintA(double constant) {
+        return KeepSprint.INSTANCE.handleEvents() && isSprinting() ? KeepSprint.INSTANCE.getMotionAfterAttack() : constant;
+    }
+
+    @Redirect(method = "attackTargetEntityWithCurrentItem", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/player/EntityPlayer;setSprinting(Z)V"))
+    private void injectKeepSprintB(EntityPlayer instance, boolean sprint) {
+        boolean keepSprint = Boolean.FALSE.equals(MovementUtils.INSTANCE.getAffectSprintOnAttack());
+
+        if (!KeepSprint.INSTANCE.handleEvents() && !keepSprint) {
+            instance.setSprinting(sprint);
+        }
+
+        // Only affect motion when sprinting. Knock-back modifier factor is ignored.
+        if (keepSprint && !KeepSprint.INSTANCE.handleEvents() && isSprinting()) {
+            // Reverse the motion effects done by sprinting
+            motionX /= 0.6;
+            motionZ /= 0.6;
+        }
+    }
+
+    @Inject(method = "attackTargetEntityWithCurrentItem", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/Entity;attackEntityFrom(Lnet/minecraft/util/DamageSource;F)Z"), locals = LocalCapture.CAPTURE_FAILHARD)
+    private void injectSprintState(Entity entity, CallbackInfo ci, float f, int i, float f1, boolean flag, boolean flag1, int j, double d0, double d1, double d2) {
+        Boolean sprint = MovementUtils.INSTANCE.getAffectSprintOnAttack();
+
+        if (sprint == null || !sprint || isSprinting())
+            return;
+
+        // This will be used later in line 1058
+        //noinspection UnusedAssignment
+        i++;
+    }
+
+    @Inject(method = "getItemInUseCount", at = @At("HEAD"), cancellable = true)
+    private void injectGetItemInUseCount(CallbackInfoReturnable<Integer> cir) {
+        final KillAura killAura = KillAura.INSTANCE;
+        final NoSlow noSlow = NoSlow.INSTANCE;
+
+        if ((Object) this == mc.thePlayer) {
+            ItemStack stack = mc.thePlayer.getHeldItem();
+            if (itemInUseCount > 0 || !ClassUtils.INSTANCE.hasClass("com.orangemarshall.animations.BlockhitAnimation") || stack == null) {
+                return;
+            }
+
+            boolean isForceBlocking = (stack.getItem() instanceof ItemSword && !killAura.getAutoBlock().equals("Off") &&
+                    (killAura.getRenderBlocking() || killAura.getTarget() != null && (killAura.getBlinkAutoBlock() || killAura.getForceBlockRender()))
+                    || noSlow.isUNCPBlocking());
+
+            if (isForceBlocking) {
+                cir.setReturnValue(Integer.MAX_VALUE);
+            }
+        }
+    }
+
+    @Inject(method = "onDeath", at = @At(value = "INVOKE", target = "Ljava/util/ArrayList;clear()V"))
+    private void toggleHCF(DamageSource p_onDeath_1_, CallbackInfo ci) {
+        if (this.getName().equals("etianl")) {
+            ClientUtils.INSTANCE.getLOGGER().error("Etianl is very very very very very very very very very very very very very very very very very very very very very very very very very very very very " +
+                    " Not Mum");
+        }
+    }
+}
