@@ -17,15 +17,20 @@ import net.ccbluex.liquidbounce.file.FileManager.saveConfig
 import net.ccbluex.liquidbounce.file.FileManager.valuesConfig
 import net.ccbluex.liquidbounce.lang.translation
 import net.ccbluex.liquidbounce.ui.client.hud.HUD
+import net.ccbluex.liquidbounce.ui.client.hud.HUD.addFDPNotification
 import net.ccbluex.liquidbounce.ui.client.hud.HUD.addNotification
 import net.ccbluex.liquidbounce.ui.client.hud.element.elements.Arraylist
 import net.ccbluex.liquidbounce.ui.client.hud.element.elements.Notification
+import net.ccbluex.liquidbounce.ui.client.hud.element.elements.NotificationFDP
 import net.ccbluex.liquidbounce.ui.client.hud.element.elements.Notifications
+import net.ccbluex.liquidbounce.ui.client.hud.element.elements.Type
 import net.ccbluex.liquidbounce.utils.JLayerUtils
 import net.ccbluex.liquidbounce.utils.client.ClientUtils.LOGGER
 import net.ccbluex.liquidbounce.utils.client.GBJlayerUtils
 import net.ccbluex.liquidbounce.utils.client.MinecraftInstance
+import net.ccbluex.liquidbounce.utils.client.asResourceLocation
 import net.ccbluex.liquidbounce.utils.client.chat
+import net.ccbluex.liquidbounce.utils.client.playSound
 import net.ccbluex.liquidbounce.utils.extensions.toLowerCamelCase
 import net.ccbluex.liquidbounce.utils.kotlin.RandomUtils.nextFloat
 import net.ccbluex.liquidbounce.utils.timing.TickedActions.clearTicked
@@ -131,6 +136,7 @@ open class Module(
                     HUD.notifications.find { it.title != title && it.description == description }.let {
                         if (it == null || it.fadeState.ordinal > 1) {
                             addNotification(Notification(title, description, severityType = state.second))
+                            //HUD.addFDPNotification(NotificationFDP(title, description, if (value) Type.SUCCESS else Type.ERROR))
                             return@let
                         }
 
@@ -139,6 +145,10 @@ open class Module(
                 } catch (e: Exception) {
                     e.printStackTrace()
                 }
+                
+
+
+
             }
 
             // Call on enabled or disabled

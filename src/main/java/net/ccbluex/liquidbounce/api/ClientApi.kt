@@ -1,5 +1,7 @@
 package net.ccbluex.liquidbounce.api
 
+import net.ccbluex.liquidbounce.Lizz
+import net.ccbluex.liquidbounce.utils.extensions.toLowerCamelCase
 import net.ccbluex.liquidbounce.utils.io.applyBypassHttps
 import net.ccbluex.liquidbounce.utils.io.decodeJson
 import net.ccbluex.liquidbounce.utils.io.get
@@ -43,7 +45,7 @@ object ClientApi {
 
 
     fun getSettingsList(branch: String = HARD_CODED_BRANCH): List<AutoSettings> {
-        val url = "$API_V1_ENDPOINT/client/$branch/settings"
+        val url = "${Lizz.CLIENT_CLOUD.toLowerCamelCase()}/settings.json"
         client.get(url).use { response ->
             if (!response.isSuccessful) error("Request failed: ${response.code}")
             return response.body.charStream().decodeJson()
@@ -51,7 +53,7 @@ object ClientApi {
     }
 
     fun getSettingsScript(branch: String = HARD_CODED_BRANCH, settingId: String): String {
-        val url = "$API_V1_ENDPOINT/client/$branch/settings/$settingId"
+        val url = "${Lizz.CLIENT_CLOUD}/settings/$branch/$settingId.txt"
         client.get(url).use { response ->
             if (!response.isSuccessful) error("Request failed: ${response.code}")
             return response.body.string()

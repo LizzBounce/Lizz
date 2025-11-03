@@ -38,6 +38,7 @@ import net.ccbluex.liquidbounce.tabs.HeadsTab
 import net.ccbluex.liquidbounce.ui.client.altmanager.GuiAltManager.Companion.loadActiveGenerators
 import net.ccbluex.liquidbounce.ui.client.clickgui.ClickGui
 import net.ccbluex.liquidbounce.ui.client.hud.HUD
+import net.ccbluex.liquidbounce.ui.cnfont.FontLoaders
 import net.ccbluex.liquidbounce.ui.font.Fonts
 import net.ccbluex.liquidbounce.utils.JLayerUtils
 import net.ccbluex.liquidbounce.utils.client.BlinkUtils
@@ -84,7 +85,7 @@ object Lizz {
     //Shader.kt and file names
     const val CLIENT_NAME = "Lizz"
     const val CLIENT_AUTHOR = "Rainruin"
-    const val CLIENT_CLOUD = "https://cloud.liquidbounce.net/LiquidBounce"
+    const val CLIENT_CLOUD = "https://lizzcloud.bmwcloud.top/Lizz"
     const val CLIENT_WEBSITE = "lizz.today"
     const val CLIENT_GITHUB = "https://github.com/Rainruin/Lizz"
 
@@ -97,7 +98,7 @@ object Lizz {
      * Defines if the client is in development mode.
      * This will enable update checking on commit time instead of regular legacy versioning.
      */
-    const val IN_DEV = true
+    const val IN_DEV = false
 
     val clientTitle = CLIENT_NAME+ "-" + clientVersionText+" [-]"
 
@@ -113,6 +114,8 @@ object Lizz {
 
     // HUD & ClickGUI
     val hud = HUD
+
+    val hud2 = HUD
 
     val clickGui = ClickGui
 
@@ -165,6 +168,8 @@ object Lizz {
                 LOGGER.info("Starting preload tasks of $CLIENT_NAME")
 
 
+
+
                 // Download and extract fonts
                 //Fonts.downloadFonts()
                 //Fonts.loadFonts()
@@ -208,6 +213,8 @@ object Lizz {
 
             // Load client fonts
             Fonts.loadFonts()
+
+            net.ccbluex.liquidbounce.ui.lbppfont.Fonts.loadFonts()
 
             // Register listeners
             RotationUtils
