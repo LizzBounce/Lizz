@@ -1,4 +1,4 @@
-8<div align="center">
+<div align="center">
 <p>
     <img width="250" src="/src/main/resources/assets/minecraft/lizz/logo_icon.png">
 </p>
