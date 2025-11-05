@@ -10,4 +10,4 @@
 Lizz是一个基于Mixin注入黑客端，使用Minecraft Forge 1.8.9，基于CCBluex的水影。
 
 ## 协议
-本项目使用GPL-V3协议
+本项目使用[GNU General Public License v3.0](LICENSE)协议
