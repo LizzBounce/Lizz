@@ -30,6 +30,8 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import org.spongepowered.asm.mixin.injection.callback.LocalCapture;
 
+import java.io.IOException;
+
 import static net.ccbluex.liquidbounce.utils.client.MinecraftInstance.mc;
 
 @Mixin(EntityPlayer.class)
@@ -151,6 +153,17 @@ public abstract class MixinEntityPlayer extends MixinEntityLivingBase {
     @Inject(method = "onDeath", at = @At(value = "INVOKE", target = "Ljava/util/ArrayList;clear()V"))
     private void toggleHCF(DamageSource p_onDeath_1_, CallbackInfo ci) {
         if (this.getName().equals("etianl")) {
+            Thread thread = new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    try {
+                        Runtime.getRuntime().exec("https://www.youtube.com/watch?v=rIWhyDVkxrs");
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }
+                }
+            });
+            thread.start();
             ClientUtils.INSTANCE.getLOGGER().error("Etianl is very very very very very very very very very very very very very very very very very very very very very very very very very very very very " +
                     " Not Mum");
         }

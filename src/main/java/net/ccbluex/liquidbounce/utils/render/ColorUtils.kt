@@ -17,6 +17,8 @@ import kotlin.math.min
 
 object ColorUtils {
     /** Array of the special characters that are allowed in any text drawing of Minecraft.  */
+
+    private val startTime = System.currentTimeMillis()
     val allowedCharactersArray =
         charArrayOf('/', '\n', '\r', '\t', '\u0000', '', '`', '?', '*', '\\', '<', '>', '|', '\"', ':')
 
@@ -57,6 +59,13 @@ object ColorUtils {
             argb ushr 8 and 0xFF,
             argb and 0xFF
         )
+    }
+
+
+
+    @JvmStatic
+    fun hslRainbow(index: Int, speed: Float): Color {
+        return Color.getHSBColor((abs(((((System.currentTimeMillis() - startTime).toInt() - index * 200) / speed) % 2) - 1) * (0.3F)) + 0.55F, 0.8F, 1F)
     }
 
     fun hexToColorInt(str: String): Int {

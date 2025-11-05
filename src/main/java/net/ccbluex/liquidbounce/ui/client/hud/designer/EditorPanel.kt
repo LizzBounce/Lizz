@@ -665,8 +665,8 @@ class EditorPanel(private val hudDesigner: GuiHudDesigner, var x: Int, var y: In
 
                     highlightCursor()
 
-                    val normalBorderColor = if (rainbow) 0 else Color.BLUE.rgb
-                    val rainbowBorderColor = if (rainbow) Color.BLUE.rgb else 0
+                    val normalBorderColor = if (rainbow) 0 else Color.CYAN.rgb
+                    val rainbowBorderColor = if (rainbow) Color.CYAN.rgb else 0
 
                     val hue = if (rainbow) {
                         Color.RGBtoHSB(currentColor.red, currentColor.green, currentColor.blue, null)[0]

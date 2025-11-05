@@ -28,6 +28,7 @@ object HUD : MinecraftInstance {
 
     val elements = mutableListOf<Element>()
     val notifications = CopyOnWriteArrayList<Notification>()
+    val notificationFDP = CopyOnWriteArrayList<NotificationFDP>()
 
     private val ALL_ELEMENT_CLASSES = arrayOf(
         Armor::class.java,
@@ -47,6 +48,7 @@ object HUD : MinecraftInstance {
         Taco::class.java,
         Keystrokes::class.java,
         Target2::class.java
+        //FDPNotifcations::class.java
     )
 
     val ELEMENTS = ALL_ELEMENT_CLASSES.associateWithTo(IdentityHashMap(ALL_ELEMENT_CLASSES.size)) {
@@ -66,6 +68,7 @@ object HUD : MinecraftInstance {
         //addElement(Effects())
         //addElement(Notifications())
         //addElement(Keystrokes())
+        //addElement(FDPNotifcations())
         SysUtils().copyToGameDir("hud.json", "hud.json")
         loadConfig(hudConfig)
 
@@ -209,4 +212,12 @@ object HUD : MinecraftInstance {
 
     /** Remove [notification] */
     fun removeNotification(notification: Notification) = notifications.remove(notification)
+
+
+    fun addFDPNotification(notification: NotificationFDP) =
+        elements.any { it is Notifications } && notificationFDP.add(notification)
+
+    /** Remove [notification] */
+    fun removeFDPNotification(notification: NotificationFDP) = notificationFDP.remove(notification)
+
 }

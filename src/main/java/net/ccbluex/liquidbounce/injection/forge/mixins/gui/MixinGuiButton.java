@@ -7,6 +7,8 @@ package net.ccbluex.liquidbounce.injection.forge.mixins.gui;
 
 import net.ccbluex.liquidbounce.Lizz;
 import net.ccbluex.liquidbounce.features.module.modules.render.HUD;
+import net.ccbluex.liquidbounce.ui.button.*;
+import net.ccbluex.liquidbounce.ui.cnfont.FontDrawer;
 import net.ccbluex.liquidbounce.ui.cnfont.FontLoaders;
 import net.ccbluex.liquidbounce.ui.font.AWTFontRenderer;
 import net.ccbluex.liquidbounce.ui.font.Fonts;
@@ -21,6 +23,7 @@ import net.minecraft.util.MathHelper;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+import org.jetbrains.annotations.NotNull;
 import org.spongepowered.asm.mixin.*;
 
 import java.awt.*;
@@ -69,6 +72,7 @@ public abstract class MixinGuiButton extends Gui {
     private float moveX = 0F;
     private float cut;
     private float alpha;
+    private float rectY;
 
     /**
      * @author CCBlueX
@@ -76,8 +80,17 @@ public abstract class MixinGuiButton extends Gui {
     @Overwrite
     public void drawButton(Minecraft mc, int mouseX, int mouseY) {
         if (visible) {
-            final FontRenderer fontRenderer =
-                    mc.getLanguageManager().isCurrentLocaleUnicode() ? mc.fontRendererObj : Fonts.fontSemibold40;
+            final FontRenderer fontRenderer = mc.fontRendererObj;
+            final FontDrawer prideFont = FontLoaders.F16;
+            BadlionTwoButtonRenderer badlionTwoButtonRenderer = new BadlionTwoButtonRenderer((GuiButton) (Object) this);
+            MelonButtonRenderer melonButtonRenderer = new MelonButtonRenderer((GuiButton) (Object) this);
+            BlackoutButtonRenderer blackoutButtonRenderer = new BlackoutButtonRenderer((GuiButton) (Object) this);
+            FLineButtonRenderer fLineButtonRenderer = new FLineButtonRenderer((GuiButton) (Object) this);
+            HyperiumButtonRenderer hyperiumButtonRenderer = new HyperiumButtonRenderer((GuiButton) (Object) this);
+            LiquidButtonRenderer liquidButtonRenderer = new LiquidButtonRenderer((GuiButton) (Object) this);
+            LunarButtonRenderer lunarButtonRenderer = new LunarButtonRenderer((GuiButton) (Object) this);
+            PvPClientButtonRenderer pvPClientButtonRenderer = new PvPClientButtonRenderer((GuiButton) (Object) this);
+            WolframButtonRenderer wolframButtonRenderer = new WolframButtonRenderer((GuiButton) (Object) this);
             hovered = (mouseX >= this.xPosition && mouseY >= this.yPosition &&
                     mouseX < this.xPosition + this.width && mouseY < this.yPosition + this.height);
 
@@ -106,6 +119,32 @@ public abstract class MixinGuiButton extends Gui {
 
                 // LiquidBounce+
                 moveX = LBPPAnimationUtils.animate(0F, moveX, speedDelta);
+            }
+
+            if (enabled && hovered) {
+                cut += 0.05F * delta;
+
+                if (cut >= 4) cut = 4;
+
+                alpha += 0.3F * delta;
+
+                if (alpha >= 210) alpha = 210;
+
+                rectY += 0.1F * delta;
+
+                if (rectY >= height) rectY = height;
+            } else {
+                cut -= 0.05F * delta;
+
+                if (cut <= 0) cut = 0;
+
+                alpha -= 0.3F * delta;
+
+                if (alpha <= 120) alpha = 120;
+
+                rectY -= 0.05F * delta;
+
+                if (rectY <= 4) rectY = 4;
             }
 
             float roundCorner = (float) Math.max(0F, 2.4F + moveX - (this.width - 2.4F));
@@ -151,6 +190,43 @@ public abstract class MixinGuiButton extends Gui {
                     LBPPRenderUtils.drawRoundedRect(this.xPosition, this.yPosition, this.xPosition + this.width, this.yPosition + this.height, 2.4F, new Color(0, 0, 0, 150).getRGB());
                     LBPPRenderUtils.customRounded(this.xPosition, this.yPosition, this.xPosition + 2.4F + moveX, this.yPosition + this.height, 2.4F, roundCorner, roundCorner, 2.4F, (this.enabled ? new Color(0, 111, 255) : new Color(71, 71, 71)).getRGB());
                     break;
+                case "prideplus":
+                    LBPPRenderUtils.drawRoundRect(this.xPosition + (int) this.cut, this.yPosition,
+                            this.xPosition + this.width - (int) this.cut, this.yPosition + this.height, 3F,
+                            new Color(49, 51, 53, 200).getRGB());
+
+                    LBPPRenderUtils.drawRoundRect(this.xPosition + (int) this.cut, this.yPosition,
+                            this.xPosition + this.width - (int) this.cut, this.yPosition + rectY, 2F,
+                            this.enabled ? new Color(0, 165, 255, 255).getRGB() :
+                                    new Color(82, 82, 82, 200).getRGB());
+                    break;
+                case "badlion":
+                    badlionTwoButtonRenderer.render(mouseX, mouseY, Minecraft.getMinecraft());
+                    break;
+                case "melon":
+                    melonButtonRenderer.render(mouseX, mouseY, Minecraft.getMinecraft());
+                    break;
+                case "blackout":
+                    blackoutButtonRenderer.render(mouseX, mouseY, Minecraft.getMinecraft());
+                    break;
+                case "fline":
+                    fLineButtonRenderer.render(mouseX, mouseY, Minecraft.getMinecraft());
+                    break;
+                case "hyperium":
+                    hyperiumButtonRenderer.render(mouseX, mouseY, Minecraft.getMinecraft());
+                    break;
+                case "liquid":
+                    liquidButtonRenderer.render(mouseX, mouseY, Minecraft.getMinecraft());
+                    break;
+                case "lunar":
+                    lunarButtonRenderer.render(mouseX, mouseY, Minecraft.getMinecraft());
+                    break;
+                case "pvpclient":
+                    pvPClientButtonRenderer.render(mouseX, mouseY, Minecraft.getMinecraft());
+                    break;
+                case "wolfram":
+                    wolframButtonRenderer.render(mouseX, mouseY, Minecraft.getMinecraft());
+                    break;
             }
 
             if (hud.getButtonStyle().equalsIgnoreCase("minecraft")) return;
@@ -160,10 +236,19 @@ public abstract class MixinGuiButton extends Gui {
 
             AWTFontRenderer.Companion.setAssumeNonVolatile(true);
 
-            fontRenderer.drawStringWithShadow(displayString,
-                    (float) ((this.xPosition + this.width / 2) -
-                            fontRenderer.getStringWidth(displayString) / 2),
-                    this.yPosition + (this.height - 5) / 2F - 2, 14737632);
+            if (hud.getButtonStyle().equalsIgnoreCase("prideplus")) {
+                prideFont.drawStringWithShadow(displayString,
+                        (float) ((this.xPosition + this.width / 2) -
+                                fontRenderer.getStringWidth(displayString) / 2),
+                        this.yPosition + 2 + (this.height - 5) / 2F, Color.WHITE.getRGB());
+            } else {
+                //fontRenderer.drawStringWithShadow(displayString,
+                //        (float) ((this.xPosition + this.width / 2) -
+                //                fontRenderer.getStringWidth(displayString) / 2),
+                //        this.yPosition + (this.height - 5) / 2F - 2, 14737632);
+                lunarButtonRenderer.drawButtonText(Minecraft.getMinecraft());
+            }
+
 
             AWTFontRenderer.Companion.setAssumeNonVolatile(false);
 

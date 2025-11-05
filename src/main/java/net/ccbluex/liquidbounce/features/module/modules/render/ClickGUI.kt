@@ -34,7 +34,7 @@ object ClickGUI : Module("ClickGUI", Category.RENDER, Keyboard.KEY_RSHIFT, canBe
     val spacedModules by boolean("SpacedModules", false)
     val panelsForcedInBoundaries by boolean("PanelsForcedInBoundaries", false)
 
-    private val color by color("Color", Color(0, 160, 255)) { style !in arrayOf("Slowly", "Black") }
+    private val color by color("Color", Color.CYAN.rgb) { style !in arrayOf("Slowly", "Black") }
 
     val guiColor
         get() = color.rgb

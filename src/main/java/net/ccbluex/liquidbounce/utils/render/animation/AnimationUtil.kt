@@ -121,4 +121,18 @@ object AnimationUtil {
 
         return 0.5f * (sin(2 * Math.PI * progress) + 1).toFloat()
     }
+
+    fun easeOutBackNotify(x: Double): Double {
+        val c1 = 1.70158;
+        val c3 = c1 + 1;
+
+        return 1 + c3 * (x - 1).pow(3) + c1 * (x - 1).pow(2);
+    }
+
+    fun easeInBackNotify(x: Double): Double {
+        val c1 = 1.70158;
+        val c3 = c1 + 1;
+
+        return c3 * x * x * x - c1 * x * x;
+    }
 }

@@ -16,6 +16,7 @@ import net.ccbluex.liquidbounce.utils.client.MinecraftInstance
 import net.ccbluex.liquidbounce.utils.extensions.*
 import net.ccbluex.liquidbounce.utils.io.flipSafely
 import net.ccbluex.liquidbounce.utils.render.animation.AnimationUtil
+import net.ccbluex.liquidbounce.utils.render.shader.UIEffectRenderer.drawTexturedRect
 import net.minecraft.client.gui.FontRenderer
 import net.minecraft.client.gui.ScaledResolution
 import net.minecraft.client.renderer.GlStateManager.*
@@ -2084,5 +2085,195 @@ object RenderUtils : MinecraftInstance {
         glDisable(GL_BLEND)
         glDisable(GL_LINE_SMOOTH)
         glPopMatrix()
+    }
+
+    /**
+     * Draw filled circle.
+     *
+     * @param xx     the xx
+     * @param yy     the yy
+     * @param radius the radius
+     * @param color  the color
+     */
+    fun drawFilledForCircle(xx: Float, yy: Float, radius: Float, color: Color) {
+        val sections = 50
+        val dAngle = 2 * Math.PI / sections
+        var x: Float
+        var y: Float
+
+        glPushAttrib(GL_ENABLE_BIT)
+
+        glEnable(GL_BLEND)
+        glDisable(GL_TEXTURE_2D)
+        glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA)
+        glEnable(GL_LINE_SMOOTH)
+        glBegin(GL_TRIANGLE_FAN)
+
+        for (i in 0 until sections) {
+            x = (radius * sin((i * dAngle))).toFloat()
+            y = (radius * cos((i * dAngle))).toFloat()
+
+            glColor4f(color.red / 255f, color.green / 255f, color.blue / 255f, color.alpha / 255f)
+            glVertex2f(xx + x, yy + y)
+        }
+
+        color(0f, 0f, 0f)
+
+        glEnd()
+
+        glPopAttrib()
+    }
+
+    fun getGradientOffset(color1: Color, color2: Color, offset: Double): Color {
+        var offset = offset
+        val redPart: Int
+
+        // Wrap offset if it's greater than 1.0
+        if (offset > 1.0) {
+            val fractionalPart = offset % 1.0
+            val integerPart = offset.toInt()
+            offset = if (integerPart % 2 == 0) fractionalPart else 1.0 - fractionalPart
+        }
+
+        // Calculate inverse percentage
+        val inverse_percent = 1.0 - offset
+
+        // Interpolate RGB components
+        redPart = (color1.red.toDouble() * inverse_percent + color2.red.toDouble() * offset).toInt()
+        val greenPart = (color1.green.toDouble() * inverse_percent + color2.green.toDouble() * offset).toInt()
+        val bluePart = (color1.blue.toDouble() * inverse_percent + color2.blue.toDouble() * offset).toInt()
+
+        // Return the interpolated color
+        return Color(redPart, greenPart, bluePart)
+    }
+
+    /**
+     * Draw rounded rect.
+     *
+     * @param paramXStart the param x start
+     * @param paramYStart the param y start
+     * @param paramXEnd   the param x end
+     * @param paramYEnd   the param y end
+     * @param radius      the radius
+     * @param color       the color
+     */
+    fun drawShadowRect(
+        paramXStart: Float,
+        paramYStart: Float,
+        paramXEnd: Float,
+        paramYEnd: Float,
+        radius: Float,
+        color: Int
+    ) {
+        drawShadowRect(paramXStart, paramYStart, paramXEnd, paramYEnd, radius, color, true)
+    }
+
+    /**
+     * Draw rounded rect.
+     *
+     * @param paramXStart the param x start
+     * @param paramYStart the param y start
+     * @param paramXEnd   the param x end
+     * @param paramYEnd   the param y end
+     * @param radius      the radius
+     * @param color       the color
+     * @param popPush     the pop push
+     */
+    fun drawShadowRect(
+        paramXStart: Float,
+        paramYStart: Float,
+        paramXEnd: Float,
+        paramYEnd: Float,
+        radius: Float,
+        color: Int,
+        popPush: Boolean
+    ) {
+        var paramXStart = paramXStart
+        var paramYStart = paramYStart
+        var paramXEnd = paramXEnd
+        var paramYEnd = paramYEnd
+        val alpha = (color shr 24 and 0xFF) / 255.0f
+        val red = (color shr 16 and 0xFF) / 255.0f
+        val green = (color shr 8 and 0xFF) / 255.0f
+        val blue = (color and 0xFF) / 255.0f
+
+        var z: Float
+        if (paramXStart > paramXEnd) {
+            z = paramXStart
+            paramXStart = paramXEnd
+            paramXEnd = z
+        }
+
+        if (paramYStart > paramYEnd) {
+            z = paramYStart
+            paramYStart = paramYEnd
+            paramYEnd = z
+        }
+
+        val x1 = (paramXStart + radius).toDouble()
+        val y1 = (paramYStart + radius).toDouble()
+        val x2 = (paramXEnd - radius).toDouble()
+        val y2 = (paramYEnd - radius).toDouble()
+
+        if (popPush) glPushMatrix()
+        glEnable(GL_BLEND)
+        glDisable(GL_TEXTURE_2D)
+        glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA)
+        glEnable(GL_LINE_SMOOTH)
+        glLineWidth(1f)
+
+        glColor4f(red, green, blue, alpha)
+        glBegin(GL_POLYGON)
+
+        val degree = Math.PI / 180
+        run {
+            var i = 0.0
+            while (i <= 90) {
+                glVertex2d(x2 + sin(i * degree) * radius, y2 + cos(i * degree) * radius)
+                i += 1.0
+            }
+        }
+        run {
+            var i = 90.0
+            while (i <= 180) {
+                glVertex2d(
+                    x2 + sin(i * degree) * radius,
+                    y1 + cos(i * degree) * radius
+                )
+                i += 1.0
+            }
+        }
+        run {
+            var i = 180.0
+            while (i <= 270) {
+                glVertex2d(
+                    x1 + sin(i * degree) * radius,
+                    y1 + cos(i * degree) * radius
+                )
+                i += 1.0
+            }
+        }
+        var i = 270.0
+        while (i <= 360) {
+            glVertex2d(x1 + sin(i * degree) * radius, y2 + cos(i * degree) * radius)
+            i += 1.0
+        }
+        glEnd()
+
+        glEnable(GL_TEXTURE_2D)
+        glDisable(GL_BLEND)
+        glDisable(GL_LINE_SMOOTH)
+        if (popPush) glPopMatrix()
+    }
+
+    fun drawShadow(x: Float, y: Float, width: Float, height: Float) {
+        drawTexturedRect(x - 9, y - 9, 9F, 9F, "paneltopleft")
+        drawTexturedRect(x - 9, y + height, 9F, 9F, "panelbottomleft")
+        drawTexturedRect(x + width, y + height, 9F, 9F, "panelbottomright")
+        drawTexturedRect(x + width, y - 9, 9F, 9F, "paneltopright")
+        drawTexturedRect(x - 9, y, 9F, height, "panelleft")
+        drawTexturedRect(x + width, y, 9F, height, "panelright")
+        drawTexturedRect(x, y - 9, width, 9F, "paneltop")
+        drawTexturedRect(x, y + height, width, 9F, "panelbottom")
     }
 }

@@ -17,6 +17,7 @@ import net.ccbluex.liquidbounce.features.module.modules.world.FastPlace;
 import net.ccbluex.liquidbounce.file.configs.models.ClientConfiguration;
 import net.ccbluex.liquidbounce.injection.forge.SplashProgressLock;
 import net.ccbluex.liquidbounce.ui.client.lbpp.GuiMainMenu;
+import net.ccbluex.liquidbounce.ui.cnfont.FontLoaders;
 import net.ccbluex.liquidbounce.utils.JLayerUtils;
 import net.ccbluex.liquidbounce.utils.attack.CPSCounter;
 import net.ccbluex.liquidbounce.utils.client.ClientUtils;
@@ -177,6 +178,7 @@ public abstract class MixinMinecraft {
         if (displayHeight < 622) displayHeight = 622;
 
         lizz$preloadFuture = Lizz.INSTANCE.preload();
+
     }
 
     @Inject(method = "runGameLoop", at = @At(value = "INVOKE", target = "Lnet/minecraft/profiler/Profiler;startSection(Ljava/lang/String;)V", ordinal = 1))
@@ -187,6 +189,8 @@ public abstract class MixinMinecraft {
     @Inject(method = "startGame", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/Minecraft;checkGLError(Ljava/lang/String;)V", ordinal = 2, shift = At.Shift.AFTER))
     private void startGame(CallbackInfo callbackInfo) throws ExecutionException, InterruptedException {
         lizz$preloadFuture.get();
+
+        FontLoaders.initFonts();
 
         Lizz.INSTANCE.startClient();
     }

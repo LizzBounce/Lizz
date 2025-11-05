@@ -7,6 +7,8 @@
 package net.ccbluex.liquidbounce.injection.forge.mixins.gui;
 
 import net.ccbluex.liquidbounce.features.module.modules.render.HUD;
+import net.ccbluex.liquidbounce.ui.cnfont.FontDrawer;
+import net.ccbluex.liquidbounce.ui.cnfont.FontLoaders;
 import net.ccbluex.liquidbounce.ui.font.Fonts;
 import net.ccbluex.liquidbounce.utils.render.LBPPAnimationUtils;
 import net.ccbluex.liquidbounce.utils.render.LBPPRenderUtils;
@@ -50,7 +52,8 @@ public abstract class MixinGuiButtonExt extends GuiButton {
     public void drawButton(Minecraft mc, int mouseX, int mouseY) {
         if (visible) {
             final FontRenderer fontRenderer =
-                    mc.getLanguageManager().isCurrentLocaleUnicode() ? mc.fontRendererObj : Fonts.fontSemibold40;
+                    mc.getLanguageManager().isCurrentLocaleUnicode() ? mc.fontRendererObj : Fonts.font40;
+            final FontDrawer prideFont = FontLoaders.F16;
             hovered = (mouseX >= this.xPosition && mouseY >= this.yPosition &&
                     mouseX < this.xPosition + this.width && mouseY < this.yPosition + this.height);
 
@@ -124,17 +127,30 @@ public abstract class MixinGuiButtonExt extends GuiButton {
                     LBPPRenderUtils.drawRoundedRect(this.xPosition, this.yPosition, this.xPosition + this.width, this.yPosition + this.height, 2.4F, new Color(0, 0, 0, 150).getRGB());
                     LBPPRenderUtils.customRounded(this.xPosition, this.yPosition, this.xPosition + 2.4F + moveX, this.yPosition + this.height, 2.4F, roundCorner, roundCorner, 2.4F, (this.enabled ? new Color(0, 111, 255) : new Color(71, 71, 71)).getRGB());
                     break;
+                case "prideplus":
+                    LBPPRenderUtils.drawRoundRect(this.xPosition  + (int) this.cut, this.yPosition,
+                            this.xPosition + this.width - (int) this.cut, this.yPosition + this.height, 3,
+                            this.enabled ? new Color(0F, 0F, 0F, this.alpha / 255F).getRGB() :
+                                    new Color(0.5F, 0.5F, 0.5F, 0.5F).getRGB());
+
+                    break;
             }
 
             if (hud.getButtonStyle().equalsIgnoreCase("minecraft")) return;
 
             mc.getTextureManager().bindTexture(buttonTextures);
             mouseDragged(mc, mouseX, mouseY);
-
-            fontRenderer.drawStringWithShadow(displayString,
-                    (float) ((this.xPosition + this.width / 2) -
-                            fontRenderer.getStringWidth(displayString) / 2),
-                    this.yPosition + (this.height - 5) / 2F - 2, 14737632);
+            if (hud.getButtonStyle().equalsIgnoreCase("prideplus")) {
+                prideFont.drawStringWithShadow(displayString,
+                        (float) ((this.xPosition + this.width / 2) -
+                                fontRenderer.getStringWidth(displayString) / 2),
+                        this.yPosition + (this.height - 5) / 2F, 14737632);
+            } else {
+                fontRenderer.drawStringWithShadow(displayString,
+                        (float) ((this.xPosition + this.width / 2) -
+                                fontRenderer.getStringWidth(displayString) / 2),
+                        this.yPosition + (this.height - 5) / 2F - 2, 14737632);
+            }
 
             GlStateManager.resetColor();
         }

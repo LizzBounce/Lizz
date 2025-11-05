@@ -1535,5 +1535,146 @@ public final class LBPPRenderUtils extends MinecraftInstance {
         glEnd();
     }
 
+    public static void drawRoundRect(float x0, float y0, float x1, float y1,float radius,int color) {
+        if(x0 == x1 || y0 == y1) return;
+        final int Semicircle = 18;
+        final float f = 90.0f / Semicircle;
+        final float f2 = (color >> 24 & 0xFF) / 255.0f;
+        final float f3 = (color >> 16 & 0xFF) / 255.0f;
+        final float f4 = (color >> 8 & 0xFF) / 255.0f;
+        final float f5 = (color & 0xFF) / 255.0f;
+        GL11.glDisable(2884);
+        GL11.glDisable(3553);
+        GL11.glEnable(3042);
+        GL11.glBlendFunc(770, 771);
+        OpenGlHelper.glBlendFunc(770, 771, 1, 0);
+        GL11.glColor4f(f3, f4, f5, f2);
+        GL11.glBegin(5);
+        GL11.glVertex2f(x0 + radius, y0);
+        GL11.glVertex2f(x0 + radius, y1);
+        GL11.glVertex2f(x1 - radius, y0);
+        GL11.glVertex2f(x1 - radius, y1);
+        GL11.glEnd();
+        GL11.glBegin(5);
+        GL11.glVertex2f(x0, y0 + radius);
+        GL11.glVertex2f(x0 + radius, y0 + radius);
+        GL11.glVertex2f(x0, y1 - radius);
+        GL11.glVertex2f(x0 + radius, y1 - radius);
+        GL11.glEnd();
+        GL11.glBegin(5);
+        GL11.glVertex2f(x1, y0 + radius);
+        GL11.glVertex2f(x1 - radius, y0 + radius);
+        GL11.glVertex2f(x1, y1 - radius);
+        GL11.glVertex2f(x1 - radius, y1 - radius);
+        GL11.glEnd();
+        GL11.glBegin(6);
+        float f6 = x1 - radius;
+        float f7 = y0 + radius;
+        GL11.glVertex2f(f6, f7);
+        int j;
+        for (j = 0; j <= Semicircle; ++j) {
+            final float f8 = j * f;
+            GL11.glVertex2f((float) (f6 + radius * Math.cos(Math.toRadians(f8))),
+                    (float) (f7 - radius * Math.sin(Math.toRadians(f8))));
+        }
+        GL11.glEnd();
+        GL11.glBegin(6);
+        f6 = x0 + radius;
+        f7 = y0 + radius;
+        GL11.glVertex2f(f6, f7);
+        for (j = 0; j <= Semicircle; ++j) {
+            final float f9 = j * f;
+            GL11.glVertex2f((float) (f6 - radius * Math.cos(Math.toRadians(f9))),
+                    (float) (f7 - radius * Math.sin(Math.toRadians(f9))));
+        }
+        GL11.glEnd();
+        GL11.glBegin(6);
+        f6 = x0 + radius;
+        f7 = y1 - radius;
+        GL11.glVertex2f(f6, f7);
+        for (j = 0; j <= Semicircle; ++j) {
+            final float f10 = j * f;
+            GL11.glVertex2f((float) (f6 - radius * Math.cos(Math.toRadians(f10))),
+                    (float) (f7 + radius * Math.sin(Math.toRadians(f10))));
+        }
+        GL11.glEnd();
+        GL11.glBegin(6);
+        f6 = x1 - radius;
+        f7 = y1 - radius;
+        GL11.glVertex2f(f6, f7);
+        for (j = 0; j <= Semicircle; ++j) {
+            final float f11 = j * f;
+            GL11.glVertex2f((float) (f6 + radius * Math.cos(Math.toRadians(f11))),
+                    (float) (f7 + radius * Math.sin(Math.toRadians(f11))));
+        }
+        GL11.glEnd();
+        GL11.glEnable(3553);
+        GL11.glEnable(2884);
+        GL11.glDisable(3042);
+        GlStateManager.enableTexture2D();
+        GlStateManager.disableBlend();
+    }
+    public static void drawRoundRect(float x, float y, float x1, float y1, int color) {
+        drawRoundedRect(x, y, x1, y1, color, color);
+        GlStateManager.color(1,1,1);
+    }
+
+    public static void drawGradientSidewaysV(double left, double top, double right, double bottom, int col1, int col2) {
+        glEnable(GL_BLEND);
+        glDisable(GL_TEXTURE_2D);
+        glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+        glEnable(GL_LINE_SMOOTH);
+        glShadeModel(GL_SMOOTH);
+
+        quickDrawGradientSidewaysV(left, top, right, bottom, col1, col2);
+
+        glEnable(GL_TEXTURE_2D);
+        glDisable(GL_BLEND);
+        glDisable(GL_LINE_SMOOTH);
+        glShadeModel(GL_FLAT);
+    }
+    public static void quickDrawGradientSidewaysV(double left, double top, double right, double bottom, int col1, int col2) {
+        glBegin(GL_QUADS);
+
+        glColor(col1);
+        glVertex2d(right, top);
+        glVertex2d(left, top);
+        glColor(col2);
+        glVertex2d(left, bottom); // TODO: Fix this, this may have been a mistake
+        glVertex2d(right, bottom);
+
+        glEnd();
+    }
+
+    public static void drawGradientSidewaysH(double left, double top, double right, double bottom, int col1, int col2) {
+        glEnable(GL_BLEND);
+        glDisable(GL_TEXTURE_2D);
+        glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+        glEnable(GL_LINE_SMOOTH);
+        glShadeModel(GL_SMOOTH);
+
+        quickDrawGradientSidewaysH(left, top, right, bottom, col1, col2);
+
+        glEnable(GL_TEXTURE_2D);
+        glDisable(GL_BLEND);
+        glDisable(GL_LINE_SMOOTH);
+        glShadeModel(GL_FLAT);
+    }
+
+    public static void quickDrawGradientSidewaysH(double left, double top, double right, double bottom, int col1, int col2) {
+        glBegin(GL_QUADS);
+
+        glColor(col1);
+        glVertex2d(left, top);
+        glVertex2d(left, bottom);
+        glColor(col2);
+        glVertex2d(right, bottom);
+        glVertex2d(right, top);
+
+        glEnd();
+    }
+
+
+
 
 }

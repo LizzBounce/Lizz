@@ -37,9 +37,14 @@ object HUD : Module("HUD", Category.RENDER, gameDetecting = false, defaultState 
 
     val chatRectValue by boolean("ChatRect", true)
 
+    val uiEffectValue by boolean("UIEffect", true)
+    val buttonShadowValue by boolean("ShadowButton", false){ uiEffectValue }
+    val UiShadowValue by choices("UIEffectMode", arrayOf("Shadow", "Glow", "None"), "None"){ uiEffectValue }
+
+
     val fontType by font("Font", Fonts.fontSemibold40, { fontChatValue })
 
-    val buttonStyle by choices("Button-Style", arrayOf("Minecraft", "LiquidBounce", "Rounded", "LiquidBounce+"), "LiquidBounce+")
+    val buttonStyle by choices("Button-Style", arrayOf("Minecraft", "LiquidBounce", "Rounded", "LiquidBounce+", "PridePlus", "Badlion", "Melon", "Blackout", "Fline", "Hyperium", "Liquid", "Lunar", "PvPClient", "Wolfram"), "PvPClient")
 
     private var hotBarX = 0F
 
