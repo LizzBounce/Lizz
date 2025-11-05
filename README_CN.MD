@@ -14,6 +14,7 @@ Lizz是一个基于Mixin注入黑客端，使用Minecraft Forge 1.8.9，基于CC
 
 ## 如何构建Lizz
 1.下载[Lizz](https://github.com/LizzBounce/Lizz/archive/refs/heads/main.zip)源码
+
 2.用IDEA打开此项目
 
 3.在终端输入./gradlew build
