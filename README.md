@@ -10,7 +10,7 @@
 Lizz is A free mixin-based injection hacked-client for Minecraft using Minecraft Forge, supporting version 1.8.9
 Based On LiquidBounce.
 
-**b2.3 is the final release published by our community maintainers, and no further pull requests will be accepted.** A huge thanks to everyone who contributed to the project over the years, with special recognition to our lead maintainers, @EclipsesDev and @mems01.
+**b2.2 is the final release published by our community maintainers, and no further pull requests will be accepted.** A huge thanks to everyone who contributed to the project over the years, with special recognition to our lead maintainers, @EclipsesDev and @mems01.
 
 
 We are grateful for the support we received from the community and hope that you will continue to support us in the future on our new code base, [Nextgen](https://github.com/LizzBounce/Lizz/tree/nextgen) that will continue to be maintained by us.
