@@ -22,4 +22,4 @@ Lizz是一个基于Mixin注入的黑客端，使用Minecraft Forge 1.8.9，基�
 4.在build/libs就可以找到本体了
 
 ## 计划
-替换跨版本框架为NightX作者的ViaForgePlus [ ]
+替换跨版本框架为NightX作者的ViaForgePlus [ x ]
